@@ -28,3 +28,21 @@ authRouter.post('/signup', (res, res, next) => {
   })
 })
 
+authRouter.post('/login', (req, res, next) => {
+  User.findOne({username: req.body.username.toLowerCase()},
+  (err, user) => {
+    if(err) {
+      return next(err)
+    }
+
+    if (!user || user.password !== req.body.password) {
+      res.status(403)
+      return next(new Error('Email or password are incorrect'))
+    }
+
+    const token = jwt.sign(user.toObject(), process.env.SECRET)
+    return res.send({token: token, user: user.toObject(), success: true})
+  })
+})
+
+module.exports = authRouter
