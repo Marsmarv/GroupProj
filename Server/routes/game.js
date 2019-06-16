@@ -20,12 +20,11 @@ gameRouter.post('/', (req, res, next) => {
       res.status(500)
       return next(err)
     }
-    if (!game) {
-      res.status(404)
-      return next(new Error('no game'))
-    }
-    return res.send(newGame)
+    return res.status(201).send(newGame)
   })
 })
 
 module.exports = gameRouter
+
+// not completeted
+// don't really know what we'll be needing a game component for yet

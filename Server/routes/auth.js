@@ -14,7 +14,6 @@ authRouter.post('/signup', (req, res, next) => {
       res.status(400)
       return next(new Error('Username already exists'))
     }
-
     const newUser = new User(req.body)
     newUser.save((err, user) => {
       if (err) {
@@ -29,8 +28,7 @@ authRouter.post('/signup', (req, res, next) => {
 })
 
 authRouter.post('/login', (req, res, next) => {
-  User.findOne({username: req.body.username.toLowerCase()},
-  (err, user) => {
+  User.findOne({username: req.body.username.toLowerCase()},(err, user) => {
     if(err) {
       return next(err)
     }
@@ -46,3 +44,5 @@ authRouter.post('/login', (req, res, next) => {
 })
 
 module.exports = authRouter
+
+// authentication component complete

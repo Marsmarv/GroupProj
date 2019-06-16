@@ -3,11 +3,11 @@ const Schema = mongoose.Schema
 
 const gameSchema = new Schema({
   wins: {
-    type: String,
+    type: Number,
     required: false
   },
   losses: {
-    type: String,
+    type: Number,
     required: false
   },
   user: {
@@ -18,3 +18,5 @@ const gameSchema = new Schema({
 })
 
 module.exports = mongoose.model("Game", gameSchema)
+
+//not sure what else will be needed here
