@@ -11,13 +11,13 @@ import { Switch, Route } from 'react-router-dom'
 const App = () => {
   return (
     <>
-      <Navbar />
+      <Footer />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/about' component={About} />
           <Route path='/games' component={Games} />
         </Switch>
-      <Footer />
+      <Navbar /> // this is where the game images would go 
     </>
   )
 }
