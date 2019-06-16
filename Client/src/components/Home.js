@@ -3,7 +3,7 @@ import Fade from 'react-reveal/Fade'
 
 const Home = () => {
   return (
-    <Fade>
+    <Fade right>
       <div className='home content'>
         <div className="div">Home</div>  
       </div>
