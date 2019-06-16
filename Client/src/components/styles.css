@@ -4,29 +4,39 @@
 
 /* content = all components */
 .content{
-  height: 500px;
-  width: 500px;
+
+  width: auto;
   background-color:black;
   color: white;
   border:white solid 2px;
+  text-align: center;
 }
 
 .navbar{
-
+  height: 200px;
 }
 
 .about{
-
+  height: 500px;
 }
 
 .home{
-
+  height: 500px;
 }
 
 .games{
-
+  height: 500px;
 }
 
 .footer{
+  height: 100px;
+  width: auto;
+}
 
+.nav{
+  margin: 30px;
+}
+
+.div{
+  margin: 30px
 }
