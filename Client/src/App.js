@@ -5,20 +5,21 @@ import About from './components/About'
 import Games from './components/Games';
 import Footer from './components/Footer'
 import './components/styles.css'
+import Fade from 'react-reveal/Fade'
 
 import { Switch, Route } from 'react-router-dom'
 
 const App = () => {
   return (
-    <>
-      <Navbar />
+    <Fade>
+      <Footer /> {/* this is technically the header but i didn't rename it */}
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/about' component={About} />
           <Route path='/games' component={Games} />
         </Switch>
-      <Footer />
-    </>
+      <Navbar /> {/*this is where the game images would go  */}
+    </Fade>
   )
 }
 
