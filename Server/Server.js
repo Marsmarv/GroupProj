@@ -8,20 +8,22 @@ const PORT = process.env.PORT || 1989
 
 app.use(express.json())
 app.use(morgan('dev'))
-app.use('/api', expressJwt({secret: process.env.SECRET}))
-app.use('/app/game', require('./routes/game'))
+
+
 
 mongoose.set('useCreateIndex', true)
 mongoose.connect('mongodb://localhost:27017/game-app',
-  { useNewUrlParser: true },
-  (err) => {
-    if (err) throw err;
-    console.log("Connected to the database");
-  }
+{ useNewUrlParser: true },
+(err) => {
+  if (err) throw err;
+  console.log("Connected to the database");
+}
 ) 
 
+app.use('/api', expressJwt({secret: process.env.SECRET}))
+app.use('/api/game', require('./routes/game'))
 app.use('/auth', require("./routes/auth"))
-app.use("/game", require("./routes/game"));
+// app.use("/game", require("./routes/game"));
 
 app.use((err, req, res, next) => {
     console.error(err);
