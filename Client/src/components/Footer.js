@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import Fade from 'react-reveal/Fade'
 
+
 const Footer = () => {
   return (
     <Fade left>
