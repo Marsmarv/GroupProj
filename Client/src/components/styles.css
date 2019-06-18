@@ -1,25 +1,138 @@
 *{
-
+  margin: 0;
+  box-sizing: border-box;
 }
-
-/* content = all components */
-.content{
-
+body{
+  background-color: rgb(20, 215, 250);
+}
+/* header content */
+.header{
+  display: flex;
+  justify-content: flex-end;
+  height: 10vh;
   width: auto;
-  background-color:black;
-  color: white;
-  border:white solid 2px;
-  text-align: center;
+  background-image: url('../images/sky.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.login{
+  background-image: url('http://vectv.net/statics/core/images/no-avatar.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px; 
+  height: 70px;
+  width: 70px;
 }
 
-.navbar{
-  height: 200px;
-}
+/* Body content */
 
+.charizard{
+  background-image: url('https://thumbs.gfycat.com/WiltedIdioticFrilledlizard-size_restricted.gif');
+  background-size: 300px; 
+  height: 180px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
 .about{
-  height: 500px;
+  background-image: url('https://data.whicdn.com/images/275493408/original.gif');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 65vh;
 }
 
+/* Footer content */
+
+.footer{
+  height: 25vh;
+  background: rgb(241, 239, 233);
+  border-style: solid;
+  border-width: 5px 0;
+  border-color: black;
+  display: flex;
+  border-radius: px 10px 0 0;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.toggle{
+  background: rgb(129, 120, 120);
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 100px;
+  height: 120px;
+  width: 120px;
+  position: relative;
+}
+.control{
+  background: rgb(12, 0, 0);
+  border-color: rgb(184, 170, 170);
+  border-style: solid;
+  border-radius: 100px;
+  height: 65px;
+  width: 65px;
+  margin: 25px;
+}
+.home-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14pt;
+  text-align: center;
+  background: rgb(65, 63, 63);
+  border-color: rgb(2, 2, 2);
+  border-radius: 50px;
+  height: 35px;
+  width: 65px;
+}
+.button-container{
+  color: white;
+  font-size: 13pt;
+  text-shadow: 2px 2px black;
+  text-align: center;
+  background: rgb(129, 120, 120);
+  border-radius: 10px;
+  height: 120px;
+  width: 160px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px
+}
+.text{
+  width: 70px;
+}
+.games-button{
+  color: white;
+  font-size: 13pt;
+  text-align: center;
+  border-style: solid;
+  border-color: rgb(126, 24, 24);
+  background: rgb(212, 3, 3);
+  border-radius: 100px;
+  height: 60px;
+  width: 60px;
+}
+.info-button{
+  color: white;
+  font-size: 13pt;
+  text-align: center;
+  border-style: solid;
+  border-color: rgb(126, 24, 24);
+  background: rgb(212, 3, 3);
+  border-radius: 100px;
+  height: 60px;
+  width: 60px;
+}
+
+.nav{
+  margin: 30px;
+}
 .home{
   height: 500px;
 }
@@ -27,16 +140,28 @@
 .games{
   height: 500px;
 }
-
-.footer{
-  height: 100px;
-  width: auto;
+/* .tic{
+  background-image: url('../images/tic.png');
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 130px;
+  width: 130px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: black;
 }
-
-.nav{
-  margin: 30px;
-}
-
-.div{
+.game2{
+  background-image: url('../images/four2.png');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 130px;
+  width: 130px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: black;
+} */
+.main{
   margin: 30px
 }
