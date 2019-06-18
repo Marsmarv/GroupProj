@@ -9,21 +9,21 @@ body{
 .header{
   display: flex;
   justify-content: flex-end;
-  height: 10vh;
+  height: 5vh;
   width: auto;
   background-image: url('../images/sky.jpg');
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center;
 }
-.login{
+/* .login{
   background-image: url('http://vectv.net/statics/core/images/no-avatar.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50px; 
   height: 70px;
   width: 70px;
-}
+} */
 
 /* Body content */
 
@@ -41,7 +41,7 @@ body{
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center;
-  height: 65vh;
+  height: 70vh;
 }
 
 /* Footer content */
@@ -68,8 +68,9 @@ body{
   position: relative;
 }
 .control{
-  background: rgb(12, 0, 0);
+  background: rgb(65, 49, 49);
   border-color: rgb(184, 170, 170);
+  opacity: .7;
   border-style: solid;
   border-radius: 100px;
   height: 65px;
