@@ -38,8 +38,9 @@ body{
   width: 290px;
   background-repeat: no-repeat;
   background-position: center;
-  
+  position: relative;
   z-index: 1;
+
 }
 .clouds{
   background-image: url('https://data.whicdn.com/images/275493408/original.gif');
@@ -94,6 +95,7 @@ body{
   border-radius: 50px;
   height: 35px;
   width: 65px;
+  text-decoration:none
 }
 
 .home-button:active {
@@ -195,4 +197,21 @@ body{
 } */
 .main{
   margin: 30px
+}
+
+.login-container{
+  height: 65vh;
+  background-color:rgb(77, 187, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.form-set{
+  display: space-betweenl
+
+}
+
+button {
+  margin-left: 45px;
 }
