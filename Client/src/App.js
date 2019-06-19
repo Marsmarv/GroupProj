@@ -1,7 +1,6 @@
 import React from 'react'
 import Footer from './components/Footer'
-import Home from './components/Home'
-import About from './components/About'
+import HomePage from './components/HomePage'
 import Games from './components/Games'
 import Header from './components/Header'
 import './components/styles.css'
@@ -16,8 +15,7 @@ const App = () => {
     <Fade>
       <Header /> 
         <Switch>
-          <Route exact path='/about' component={About} />
-          <Route path='/home' component={Home} />
+          <Route exact path='/' component={HomePage} />
           <Route path='/games' component={Games} />  
         </Switch>
     </Fade>

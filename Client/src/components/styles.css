@@ -6,6 +6,7 @@ body{
   background-image: url('https://cdn.dribbble.com/users/621155/screenshots/2835329/coorzzz.gif');
   background-size: 800px;
   background-position-x: -210px;
+  background-repeat: no-repeat;
 }
 /* body{
   background-image: url('../images/sky.jpg');
@@ -27,7 +28,7 @@ body{
   background-repeat: no-repeat;
   background-position: center;
 }
-.login{
+.sun{
   background-image: url('../images/sunny.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -47,7 +48,7 @@ body{
   position: relative;
   z-index: 1;
 }
-.about{
+.clouds{
   background-image: url('https://data.whicdn.com/images/275493408/original.gif');
   background-size: cover; 
   background-repeat: no-repeat;
@@ -174,10 +175,6 @@ body{
 .nav{
   margin: 30px;
 }
-.home{
-  height: 500px;
-}
-
 .games{
   height: 500px;
 }
