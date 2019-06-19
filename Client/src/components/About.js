@@ -1,49 +1,34 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
+import {withGlobalProvider} from './GlobalProvider'
 
 class About extends React.Component{
   constructor() {
     super()
     this.state = {
-      positionY: 200,
-    }
-  }
-  
-  handlePositionY = (event) => {
-    console.log(event.which)
-    if(event.which === 40){
-      this.setState(prev => {
-        return {
-          positionY: prev.positionY +10
-        }
-      })
-    } else if(event.which === 38) {
-      this.setState(prev => {
-        return {
-          positionY: prev.positionY -10
-        }
-      })
+      
     }
   }
   componentDidMount() {
-    window.addEventListener('keydown', this.handlePositionY)
+    window.addEventListener('keydown', this.props.handlePositionY)
   }
   componentWillMount(){
     window.removeEventListener('keydown', () => console.log('hello'))
   }
   
   render() {
+    console.log(this)
     const styles= {
       position: 'relative',
-      top: `${this.state.positionY}pt`
+      top: `${this.props.positionY}pt`
     }
     return (
-      <Fade left>
+      <Fade right>
         <div className='about content'>
-          <div className="charizard" style = {styles}></div> 
+          <Fade delay={1000}><div className="charizard" style = {styles}></div></Fade> 
         </div>
       </Fade>
     )
   }
 }
-export default About
+export default withGlobalProvider(About)

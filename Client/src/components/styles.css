@@ -3,8 +3,17 @@
   box-sizing: border-box;
 }
 body{
-  background-color: rgb(20, 215, 250);
+  background-color: white;
 }
+/* body{
+  background-image: url('../images/sky.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  z-index: -1;
+} */
 /* header content */
 .header{
   display: flex;
@@ -17,12 +26,12 @@ body{
   background-position: center;
 }
 .login{
-  background-image: url('http://vectv.net/statics/core/images/no-avatar.png');
+  background-image: url('../images/sunny.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50px; 
-  height: 70px;
-  width: 70px;
+  background-size: 87px; 
+  height: 85px;
+  width: 100px;
 }
 
 /* Body content */
@@ -68,8 +77,9 @@ body{
   position: relative;
 }
 .control{
-  background: rgb(12, 0, 0);
+  background: rgb(65, 49, 49);
   border-color: rgb(184, 170, 170);
+  opacity: .7;
   border-style: solid;
   border-radius: 100px;
   height: 65px;
