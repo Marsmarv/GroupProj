@@ -11,6 +11,16 @@ class GlobalProvider extends React.Component{
             password: ''
         }
     }
+    joystick = (event) => {
+        console.log(event.x)
+        console.log(event.y)
+        this.setState(prev => {
+            return({
+                positionY: prev.positionY - event.y/30,
+                positionX: prev.positionX - event.x/30
+            })   
+        })  
+    }
     handlePosition = (event) => {
         if(event.which === 40){
             this.setState(prev => {
@@ -54,6 +64,7 @@ class GlobalProvider extends React.Component{
         return(
             <Provider value={{
                 ...this.state,
+                joystick: this.joystick,
                 handlePosition: this.handlePosition,
                 handleSubmit: this.handleSubmit,
                 handleChange: this.handleChange
