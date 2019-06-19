@@ -14,7 +14,6 @@ const App = () => {
   return (
     <Fade>
       <Header /> 
-      <About />
         <Switch>
           <Route exact path='/home' component={Home} />
           <Route path='/about' component={About} />
