@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Fade from 'react-reveal/Fade'
 
 const Footer = (props) => {
@@ -13,12 +13,12 @@ const Footer = (props) => {
         <div className='toggle' onTouchStart = {joystick}>
           <div className='control'></div>
         </div>
-        <div className='home-button'>HOME</div>
+        <Link to='/' className='home-button'>HOME</Link>
         <div className='button-container'>
-          <div className='text'>GAMES</div>
-          <div className='text'>LOGIN</div>
-          <div className='games-button'></div>
-          <div className='info-button'></div>
+          <div to='/games' className='text'>GAMES</div>
+          <div to='/login' className='text'>LOGIN</div>
+          <Link to='/games' className='games-button'></Link>
+          <Link to='/login' className='info-button'></Link>
         </div>
         {/* <Link to='/about' className='home-page'>home</Link>
         <Link to='/' className='tic'></Link>
