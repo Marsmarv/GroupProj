@@ -6,9 +6,10 @@ class GlobalProvider extends React.Component{
         super()
         this.state = {
             positionY: 200,
+            positionX: 200
         }
     }
-    handlePositionY = (event) => {
+    handlePosition = (event) => {
         console.log(event.which)
         if(event.which === 40){
             this.setState(prev => {
@@ -22,13 +23,26 @@ class GlobalProvider extends React.Component{
                 positionY: prev.positionY -10
                 }
             })
+        } else if(event.which === 37){
+            this.setState(prev => {
+                return {
+                    positionX: prev.positionX +10
+            }
+        })
+        } else if(event.which === 39) {
+            this.setState(prev => {
+                return {
+                positionX: prev.positionX -10
+                }
+            })
         }
     }
+
     render(){
         return(
             <Provider value={{
                 ...this.state,
-                handlePositionY: this.handlePositionY
+                handlePosition: this.handlePosition,
             }}>{this.props.children}
             </Provider>
         )
