@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from './components/Footer'
-import Home from './components/Home'
+import Login from './components/Login'
 import HomePage from './components/HomePage'
 import Games from './components/Games'
 import Header from './components/Header'
@@ -17,7 +17,7 @@ const App = () => {
       <Header /> 
         <Switch>
           <Route exact path='/' component={HomePage} />
-          <Route path='/home' component={Home} />
+          <Route path='/login' component={Login} />
           <Route path='/games' component={Games} />  
         </Switch>
     </Fade>
