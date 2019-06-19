@@ -2,7 +2,7 @@ import React from 'react'
 import Fade from 'react-reveal/Fade'
 import {withGlobalProvider} from './GlobalProvider'
 
-class About extends React.Component{
+class HomePage extends React.Component{
   constructor() {
     super()
     this.state = {
@@ -25,11 +25,11 @@ class About extends React.Component{
     }
     return (
       <Fade right delay={3500}>
-        <div className='about content'>
+        <div className='clouds'>
           <Fade delay={1000}><div className="charizard" style = {styles}></div></Fade> 
         </div>
       </Fade>
     )
   }
 }
-export default withGlobalProvider(About)
+export default withGlobalProvider(HomePage)

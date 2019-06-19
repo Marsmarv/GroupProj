@@ -14,8 +14,8 @@ const Footer = (props) => {
         <Joystick size={100} baseColor="red" stickColor="blue" move={joystick} stop={joystick}></Joystick>
         <Link to='/' className='home-button'>HOME</Link>
         <div className='button-container'>
-          <div to='/games' className='text'>GAMES</div>
-          <div to='/login' className='text'>LOGIN</div>
+          <div className='text'>GAMES</div>
+          <div className='text'>LOGIN</div>
           <Link to='/games' className='games-button'></Link>
           <Link to='/login' className='info-button'></Link>
         </div>

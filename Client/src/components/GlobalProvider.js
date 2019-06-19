@@ -38,6 +38,8 @@ class GlobalProvider extends React.Component{
         }
     }
 
+    
+
     render(){
         return(
             <Provider value={{
