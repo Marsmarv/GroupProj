@@ -20,7 +20,7 @@ body{
   background-repeat: no-repeat;
   background-position: center;
 }
-.login{
+.sun{
   background-image: url('../images/sunny.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -41,7 +41,7 @@ body{
   position: relative;
   z-index: 1;
 }
-.about{
+.clouds{
   background-image: url('https://data.whicdn.com/images/275493408/original.gif');
   background-size: cover; 
   background-repeat: no-repeat;
@@ -168,10 +168,6 @@ body{
 .nav{
   margin: 30px;
 }
-.home{
-  height: 500px;
-}
-
 .games{
   height: 500px;
 }
