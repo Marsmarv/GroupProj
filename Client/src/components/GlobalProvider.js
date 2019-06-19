@@ -9,6 +9,16 @@ class GlobalProvider extends React.Component{
             positionX: 200
         }
     }
+    joystick = (event) => {
+        console.log(event.x)
+        console.log(event.y)
+        this.setState(prev => {
+            return({
+                positionY: prev.positionY - event.y/30,
+                positionX: prev.positionX - event.x/30
+            })   
+        })  
+    }
     handlePosition = (event) => {
         console.log(event.which)
         if(event.which === 40){
@@ -44,6 +54,7 @@ class GlobalProvider extends React.Component{
         return(
             <Provider value={{
                 ...this.state,
+                joystick: this.joystick,
                 handlePosition: this.handlePosition,
             }}>{this.props.children}
             </Provider>
