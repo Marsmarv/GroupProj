@@ -16,7 +16,7 @@ const App = () => {
     <Fade>
       <Header /> 
         <Switch>
-          <Route exact path='/about' component={About} />
+          <Route exact path='/' component={About} />
           <Route path='/home' component={Home} />
           <Route path='/games' component={Games} />  
         </Switch>

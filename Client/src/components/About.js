@@ -10,7 +10,7 @@ class About extends React.Component{
     }
   }
   componentDidMount() {
-    window.addEventListener('keydown', this.props.handlePositionY)
+    window.addEventListener('keydown', this.props.handlePosition)
   }
   componentWillMount(){
     window.removeEventListener('keydown', () => console.log('hello'))
@@ -19,8 +19,9 @@ class About extends React.Component{
   render() {
     console.log(this)
     const styles= {
-      position: 'relative',
-      top: `${this.props.positionY}pt`
+      position: 'fixed',
+      top: `${this.props.positionY}pt`,
+      right: `${this.props.positionX}pt`
     }
     return (
       <Fade right delay={3500}>
