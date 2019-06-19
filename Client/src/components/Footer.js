@@ -8,7 +8,7 @@ const Footer = (props) => {
   }
   // const toggleMove = props.showMenu ? "icons" : "no-display"
   return (
-    <Fade left>
+    <>
       <div className='footer'>
         <div className='toggle' onTouchStart = {joystick}>
           <div className='control'></div>
@@ -24,7 +24,7 @@ const Footer = (props) => {
         <Link to='/' className='tic'></Link>
         <Link to='/games' className='game2'></Link> */}
       </div>
-    </Fade>
+    </>
   )
 }
 export default Footer
