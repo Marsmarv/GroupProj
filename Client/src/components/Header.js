@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <Fade left>
       <div className='header'>
-        <div className='login'></div>
+        <Fade delay={1000}><div className='login'></div></Fade>
       </div>
     </Fade>
   )

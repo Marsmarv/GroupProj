@@ -3,27 +3,36 @@
   box-sizing: border-box;
 }
 body{
-  background-color: rgb(20, 215, 250);
+  background-color: white;
 }
+/* body{
+  background-image: url('../images/sky.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  z-index: -1;
+} */
 /* header content */
 .header{
   display: flex;
   justify-content: flex-end;
-  height: 5vh;
+  height: 10vh;
   width: auto;
   background-image: url('../images/sky.jpg');
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center;
 }
-/* .login{
-  background-image: url('http://vectv.net/statics/core/images/no-avatar.png');
+.login{
+  background-image: url('../images/sunny.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50px; 
-  height: 70px;
-  width: 70px;
-} */
+  background-size: 87px; 
+  height: 85px;
+  width: 100px;
+}
 
 /* Body content */
 
@@ -41,7 +50,7 @@ body{
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center;
-  height: 70vh;
+  height: 65vh;
 }
 
 /* Footer content */
