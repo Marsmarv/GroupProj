@@ -3,27 +3,38 @@
   box-sizing: border-box;
 }
 body{
-  background-color: rgb(20, 215, 250);
+  background-image: url('https://cdn.dribbble.com/users/621155/screenshots/2835329/coorzzz.gif');
+  background-size: 800px;
+  background-position-x: -210px;
 }
+/* body{
+  background-image: url('../images/sky.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  z-index: -1;
+} */
 /* header content */
 .header{
   display: flex;
   justify-content: flex-end;
-  height: 5vh;
+  height: 10vh;
   width: auto;
   background-image: url('../images/sky.jpg');
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center;
 }
-/* .login{
-  background-image: url('http://vectv.net/statics/core/images/no-avatar.png');
+.login{
+  background-image: url('../images/sunny.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50px; 
-  height: 70px;
-  width: 70px;
-} */
+  background-size: 87px; 
+  height: 85px;
+  width: 100px;
+}
 
 /* Body content */
 
@@ -41,7 +52,7 @@ body{
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center;
-  height: 70vh;
+  height: 65vh;
 }
 
 /* Footer content */
@@ -84,12 +95,24 @@ body{
   color: white;
   font-size: 14pt;
   text-align: center;
-  background: rgb(65, 63, 63);
+  background: rgb(68, 66, 66);
   border-color: rgb(2, 2, 2);
   border-radius: 50px;
   height: 35px;
   width: 65px;
 }
+
+.home-button:active {
+  background: #070606;
+  -webkit-box-shadow: inset 0px 0px 10px #9e9e9e;
+     -moz-box-shadow: inset 0px 0px 10px #c1c1c1;
+          box-shadow: inset 0px 0px 10px #464646;
+   outline: none;
+  height: 30px;
+  width: 60px;
+  font-size: 12pt;
+}
+
 .button-container{
   color: white;
   font-size: 13pt;
@@ -119,6 +142,15 @@ body{
   height: 60px;
   width: 60px;
 }
+
+.games-button:active {
+  background: #d11a1a;
+  -webkit-box-shadow: inset 0px 0px 10px #7e2727;
+     -moz-box-shadow: inset 0px 0px 10px #c1c1c1;
+          box-shadow: inset 0px 0px 10px #000000;
+   outline: none;
+}
+
 .info-button{
   color: white;
   font-size: 13pt;
@@ -129,6 +161,14 @@ body{
   border-radius: 100px;
   height: 60px;
   width: 60px;
+}
+
+.info-button:active {
+  background: #d11a1a;
+  -webkit-box-shadow: inset 0px 0px 10px #7e2727;
+     -moz-box-shadow: inset 0px 0px 10px #c1c1c1;
+          box-shadow: inset 0px 0px 10px #000000;
+   outline: none;
 }
 
 .nav{

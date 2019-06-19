@@ -23,9 +23,9 @@ class About extends React.Component{
       top: `${this.props.positionY}pt`
     }
     return (
-      <Fade left>
+      <Fade right delay={3500}>
         <div className='about content'>
-          <div className="charizard" style = {styles}></div> 
+          <Fade delay={1000}><div className="charizard" style = {styles}></div></Fade> 
         </div>
       </Fade>
     )

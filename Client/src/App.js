@@ -12,16 +12,17 @@ import { Switch, Route } from 'react-router-dom'
 
 const App = () => {
   return (
+    <>
     <Fade>
       <Header /> 
-      <About />
         <Switch>
-          <Route exact path='/home' component={Home} />
-          <Route path='/about' component={About} />
+          <Route exact path='/about' component={About} />
+          <Route path='/home' component={Home} />
           <Route path='/games' component={Games} />  
         </Switch>
-      <Footer />
     </Fade>
+      <Footer />
+    </>
   )
 }
 
