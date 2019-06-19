@@ -6,11 +6,12 @@ class GlobalProvider extends React.Component{
         super()
         this.state = {
             positionY: 200,
-            positionX: 200
+            positionX: 200,
+            username: '',
+            password: ''
         }
     }
     handlePosition = (event) => {
-        console.log(event.which)
         if(event.which === 40){
             this.setState(prev => {
                 return {
@@ -38,13 +39,24 @@ class GlobalProvider extends React.Component{
         }
     }
 
-    
+    handleSubmit = (e) => {
+        e.preventDefault()
+        const { name, value } = e.target
+        this.setState({[name]: value})
+    }
+
+    handleChange = (e) => {
+        const { name, value } = e.target
+        this.setState({[name]: value});
+    }
 
     render(){
         return(
             <Provider value={{
                 ...this.state,
                 handlePosition: this.handlePosition,
+                handleSubmit: this.handleSubmit,
+                handleChange: this.handleChange
             }}>{this.props.children}
             </Provider>
         )

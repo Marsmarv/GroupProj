@@ -7,7 +7,6 @@ const Footer = (props) => {
   const joystick = (event) => {
     console.log(event)
   }
-  // const toggleMove = props.showMenu ? "icons" : "no-display"
   return (
     <>
       <div className='footer'>
