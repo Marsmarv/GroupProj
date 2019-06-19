@@ -33,12 +33,12 @@ body{
 
 .charizard{
   background-image: url('https://thumbs.gfycat.com/WiltedIdioticFrilledlizard-size_restricted.gif');
-  background-size: 300px; 
+  background-size: 250px; 
   height: 180px;
   width: 290px;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
+  
   z-index: 1;
 }
 .clouds{

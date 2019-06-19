@@ -2,16 +2,15 @@ import React from 'react'
 import { Joystick } from 'react-joystick-component';
 import { Link } from "react-router-dom";
 import Fade from 'react-reveal/Fade'
+import {withGlobalProvider} from './GlobalProvider'
 
 const Footer = (props) => {
-  const joystick = (event) => {
-    console.log(event)
-  }
-  // const toggleMove = props.showMenu ? "icons" : "no-display"
   return (
     <>
       <div className='footer'>
-        <Joystick size={100} baseColor="red" stickColor="blue" move={joystick} stop={joystick}></Joystick>
+
+        <Joystick size={100} baseColor="grey" stickColor="black" border='5px solid red' move={props.joystick} stop={props.joystick}></Joystick>
+
         <Link to='/' className='home-button'>HOME</Link>
         <div className='button-container'>
           <div className='text'>GAMES</div>
@@ -23,4 +22,4 @@ const Footer = (props) => {
     </>
   )
 }
-export default Footer
+export default withGlobalProvider(Footer)
