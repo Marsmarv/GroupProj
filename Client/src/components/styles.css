@@ -128,21 +128,22 @@ body{
   border-top-right-radius: 15px;
 } */
 .footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   height: 25vh;
-    background-color: rgb(23, 23, 23);
-    border-style: solid;
-    border-width: 15px;
-    border-bottom-width: 6px;
-    border-right-width: 6px;
-    border-left-width: 6px;
-    border-color: #b3b5b1;
-    display: flex;
-    justify-content: space-between;
-    display: flex;
-    border-radius: 13px;
-    align-items: center;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
+  background-color: rgb(23, 23, 23);
+  border: 15px solid #b3b5b1;
+  border-bottom-width: 6px;
+  border-right-width: 6px;
+  border-left-width: 6px;
+  border-radius: 13px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 .over-footer{
   background-color: rgb(0, 183, 255);
@@ -300,13 +301,22 @@ input{
   color: black;
   margin-left:140px
 }
+
+.game-nav{
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: -40px;
+}
 .games-content{
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
+  margin-top: 14px;
   margin-left: auto;
   margin-right: auto;
-  height: max-content;
+  height: inherit;
   width: max-content;
 }
 /* .connect-image{
@@ -315,6 +325,9 @@ input{
 .bgio-client{
   display: flex;
   justify-content: center;
+  padding: 20px;
+  background-image: url('../images/sky.jpg');    
+  text-align: center;
 }
 
 button {

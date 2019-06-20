@@ -15,6 +15,10 @@ const Games = () => {
             <Route path='/games/connect-four' component={ConnectFourApp} />
           </Switch>
         </div>
+        <div className='game-nav'>
+          <Link to='/games/tic-tac-toe'><button>TicTacToe</button></Link>
+          <Link to='/games/connect-four'><button>ConnectFour</button></Link>
+        </div>
       </div>
     </Fade>
   )
