@@ -1,7 +1,6 @@
 import React from 'react'
 import { Joystick } from 'react-joystick-component';
 import { Link } from "react-router-dom";
-import Fade from 'react-reveal/Fade'
 import {withGlobalProvider} from './GlobalProvider'
 
 const Footer = (props) => {
@@ -9,7 +8,7 @@ const Footer = (props) => {
     <>
       <div className='footer'>
 
-        <Joystick size={100} baseColor="grey" stickColor="black" border='5px solid red' move={props.joystick} stop={props.joystick}></Joystick>
+        <Joystick size={100} baseColor="grey" stickColor="black" move={props.joystick} stop={props.joystick}></Joystick>
 
         <Link to='/' className='home-button'>HOME</Link>
         <div className='button-container'>
