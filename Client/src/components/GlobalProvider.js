@@ -29,10 +29,10 @@ class GlobalProvider extends React.Component{
             console.log(response.data)
             this.setState({
                 userData: response.data,
-                wins: response.data[1].wins,
-                losses: response.data[1].losses
+                wins: response.data[0].wins,
+                losses: response.data[0].losses
             })
-            console.log(`Wins: ${this.state.userData[1].wins}`, `Losses: ${this.state.userData[1].losses}`)
+            console.log(`Wins: ${this.state.userData[0].wins}`, `Losses: ${this.state.userData[0].losses}`)
         })
     }
 
