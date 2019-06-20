@@ -10,7 +10,7 @@ const Login = (props) => {
       userSignUp({username, password}).then(()=> {
         props.history.push('/')
       })
-      alert('successful sign up')
+      alert(`successful sign up for ${props.username}`)
   }
 
   return (
@@ -31,6 +31,7 @@ const Login = (props) => {
         <button>Log in</button>
       </form>
       </div>
+        <h3 className="welcome">Welcome {props.username}!</h3>
     </Fade>
   )
 }

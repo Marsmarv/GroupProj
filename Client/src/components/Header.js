@@ -6,7 +6,7 @@ const Header = (props) => {
   return (
     <Fade left delay={2500}>
       <div className='header'>
-        <Fade delay={1000}><div className='sun'><h3>welcome back {props.username}</h3></div></Fade>
+        <Fade delay={1000}><div className='sun'></div></Fade>
       </div>
     </Fade>
   )

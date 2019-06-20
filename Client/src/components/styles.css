@@ -223,3 +223,9 @@ button {
 .joy {
   margin-left:5px;
 }
+
+.welcome{
+  background-color: black;
+  color: white;
+  text-align:center;
+}
