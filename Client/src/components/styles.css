@@ -299,8 +299,6 @@ input{
   text-decoration: none;
   color: black;
   margin-left:140px
-<<<<<<< HEAD
-=======
 }
 
 .game-nav{
@@ -308,7 +306,6 @@ input{
   justify-content: space-evenly;
   position: relative;
   top: -40px;
->>>>>>> 830a91dd9d837ea8620a07acd58a011d6eb60c95
 }
 .games-content{
   display: flex;
@@ -327,8 +324,7 @@ input{
 .bgio-client{
   display: flex;
   justify-content: center;
-  padding: 20px;
-  background-image: url('../images/sky.jpg');    
+  padding: 20px;   
   text-align: center;
 }
 
