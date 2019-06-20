@@ -1,6 +1,13 @@
 import React from 'react'
 import Axios from 'axios'
+const gameAxios = Axios.create()
 const {Consumer,Provider} = React.createContext()
+
+gameAxios.interceptors.request.use((config) => {
+    const token = localStorage.getItem('token')
+    config.headers.Authorization = `Bearer ${token}`
+    return config
+})
 
 class GlobalProvider extends React.Component{
     constructor() {
@@ -16,7 +23,7 @@ class GlobalProvider extends React.Component{
     }
 
     getUserData = () => {
-        Axios.get('/api/game').then(response => {
+        gameAxios.get('/api/game').then(response => {
             console.log(response.data)
             this.setState({userData: response.data})
         })
@@ -46,6 +53,7 @@ class GlobalProvider extends React.Component{
                 user,
                 token
             });
+            // console.log(res.data)
             this.getUserData()
             return res
         })
