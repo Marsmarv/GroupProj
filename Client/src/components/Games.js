@@ -9,7 +9,7 @@ const Games = () => {
   return (
     <Fade left>
       <div className='games content'>
-        <Fade right><Link className="connect" to='/games/connect-four'>ConnectFour</Link></Fade>
+        <Fade right><Link className='connect' to='/games/connect-four'>ConnectFour</Link></Fade>
         <div className='games-content'>
           <Switch>
             <Route path='/games/connect-four' component={ConnectFourApp} />

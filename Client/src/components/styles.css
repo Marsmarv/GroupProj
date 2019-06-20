@@ -57,7 +57,6 @@ body{
   top: -6px;
   
 }
-
 .outer-modal::after {
   background-color: #fff;
   height: 23px;
@@ -66,9 +65,6 @@ body{
   top: -10px;
   width: 23px;
 } */
-.connect {
-  text-decoration: none;
-}
 
 .outer-modal{
   position: fixed;
@@ -298,7 +294,10 @@ input{
     background-repeat: no-repeat;
     background-position-x: 5px;
 }
-
+.connect {
+  text-decoration: none;
+  color: black;
+}
 .games-content{
   display: flex;
   justify-content: center;
