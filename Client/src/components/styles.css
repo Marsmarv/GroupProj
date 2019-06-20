@@ -66,6 +66,9 @@ body{
   top: -10px;
   width: 23px;
 } */
+.connect {
+  text-decoration: none;
+}
 
 .outer-modal{
   position: fixed;
