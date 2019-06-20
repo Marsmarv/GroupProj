@@ -10,13 +10,15 @@ const Games = () => {
   return (
     <Fade bottom>
       <div className='games content'>
-        <Link to='/games/tic-tac-toe'>TicTacToe</Link>
-        <Link to='/games/connect-four'>ConnectFour</Link>
         <div className='games-content'>
           <Switch>
             <Route path='/games/connect-four' component={ConnectFourApp} />
             <Route path='/games/tic-tac-toe' component={TicTacToeApp} />
           </Switch>
+        </div>
+        <div className='game-nav'>
+          <Link to='/games/tic-tac-toe'><button>TicTacToe</button></Link>
+          <Link to='/games/connect-four'><button>ConnectFour</button></Link>
         </div>
       </div>
     </Fade>
