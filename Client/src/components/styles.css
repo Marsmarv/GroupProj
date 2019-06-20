@@ -54,21 +54,39 @@ body{
 
 /* Footer content */
 
-.footer{
+/* .footer{
   height: 25vh;
   background-image: url('http://www.serebii.net/blackwhite/pikachucgear.png');
+  background-color: black;
   background-size: 400px;
   background-position-y:170px;
   border-style: solid;
-  border-width: 5px 0;
-  border-color: black;
+  border-width: 10px 0;
+  border-color: gray;
   display: flex;
-  border-radius: px 10px 0 0;
+  border-radius: 0;
   justify-content: space-between;
   display: flex;
   align-items: center;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+} */
+.footer{
+  height: 25vh;
+    background-color: rgb(23, 23, 23);
+    border-style: solid;
+    border-width: 15px;
+    border-bottom-width: 6px;
+    border-right-width: 6px;
+    border-left-width: 6px;
+    border-color: #b3b5b1;
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    border-radius: 13px;
+    align-items: center;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 .over-footer{
   background-color: rgb(0, 183, 255);
@@ -96,12 +114,13 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: red;
+  text-shadow: #000000 2px;
   font-size: 14pt;
   text-align: center;
   background: rgb(68, 66, 66);
   border-color: rgb(2, 2, 2);
-  border-radius: 50px;
+  border-radius: 6px;
   height: 35px;
   width: 65px;
   text-decoration:none
@@ -119,13 +138,14 @@ body{
 }
 
 .button-container{
-  color: white;
+  color: black;
   font-size: 13pt;
-  text-shadow: 2px 2px black;
+  text-shadow: 2px black;
   text-align: center;
-  background: rgb(129, 120, 120);
+  /* background: rgb(129, 120, 120); */
+  background-color: #d4d7d0;
   border-radius: 10px;
-  height: 120px;
+  height: 100px;
   width: 160px;
   display: flex;
   flex-wrap: wrap;
