@@ -17,7 +17,7 @@ const Header = (props) => {
             </Fade>
           </div>
         </Fade>
-      <Fade top when={showStats === true}>
+      <Fade top opposite when={showStats === true}>
         <div className={`outer-modal ${modalDisplay}`}>
           <div className="stats-modal">
             User: {props.username}  <h3>Wins: {props.wins} , Losses: {props.losses}</h3>
