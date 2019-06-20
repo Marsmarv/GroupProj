@@ -1,7 +1,7 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
-import ConnectFourApp from '../connect-four/ConnectFourApp'
-import TicTacToeApp from '../tic-tac-toe/TicTacToeApp'
+import ConnectFourApp from '../ConnectFour/ConnectFourApp'
+import TicTacToeApp from '../TicTacToe/TicTacToeApp'
 import { Link } from "react-router-dom";
 
 import { Switch, Route } from 'react-router-dom'
