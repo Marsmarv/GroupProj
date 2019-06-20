@@ -8,10 +8,10 @@ import { Switch, Route } from 'react-router-dom'
 
 const Games = () => {
   return (
-    <Fade bottom>
+    <Fade left>
       <div className='games content'>
         {/* <Link to='/games/tic-tac-toe'>TicTacToe</Link> */}
-        <Link to='/games/connect-four'>ConnectFour</Link>
+        <Fade right><Link to='/games/connect-four'>ConnectFour</Link></Fade>
         <div className='games-content'>
           <Switch>
             <Route path='/games/connect-four' component={ConnectFourApp} />
