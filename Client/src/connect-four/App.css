@@ -9,22 +9,20 @@
   padding: 5px;
 }
 
-.row,{
+.row{
   justify-content: space-around;
-  width: min-content;
   display: flex;
 }
 
 .columnSelector{
-  width: 2em;
-  height: 2em;
+  width: 3.2em;
+  height: 3.2em;
   padding: 0;
   border: 0;
-  margin: 5.5px;
   background: transparent;
 }
 .selector{
   position: relative;
-  top: 48px;
+  top: 43px;
   left: -1px;
 }

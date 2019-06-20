@@ -19,7 +19,7 @@ class Board extends Component {
   }
 
   render() {
-    console.log(this.props.ctx)
+    console.log(this.props.ctx.gameover)
     let message = '';
     if (this.props.ctx.gameover === '0') {
       message = <span>Winner: Player {playerDiscLookup[this.props.ctx.currentPlayer]}</span>;
