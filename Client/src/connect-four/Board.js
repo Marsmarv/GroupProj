@@ -39,8 +39,12 @@ class Board extends Component {
         <div>
           {message}
         </div>
-        {selectors}
-        <Grid grid={this.props.G.grid} />
+        <div className='game-board'>
+          <div className='row selector'>
+            {selectors}
+          </div>
+          <Grid grid={this.props.G.grid} />
+        </div>
       </div>
     )
   }
@@ -48,9 +52,7 @@ class Board extends Component {
 
 const ColumnSelector = ({ active, handleClick }) => {
   return (
-    <div className="columnSelectorContainer">
-      <button disabled={!active} onClick={handleClick} className="columnSelector">Select</button>
-    </div>
+      <button disabled={!active} onClick={handleClick} className="columnSelector"></button>
   );
 }
 
