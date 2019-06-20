@@ -1,4 +1,5 @@
 import React from 'react'
+import Axios from 'axios'
 const {Consumer,Provider} = React.createContext()
 
 class GlobalProvider extends React.Component{
@@ -8,9 +9,33 @@ class GlobalProvider extends React.Component{
             positionY: 200,
             positionX: 200,
             username: '',
-            password: ''
+            password: '',
+            token: ''
         }
     }
+
+    userSignUp = (userInfo) => {
+        return Axios.post("/auth/signup", userInfo).then(res => {
+            const { username, token } = res.data
+            localStorage.setItem("token", token);
+            localStorage.setItem("username", JSON.stringify(username));
+            this.setState({
+                username,
+                token
+            });
+            return res
+        })
+    }
+
+    
+
+    handleChange = (e) => {
+        const { name, value } = e.target
+        this.setState({[name]: value});
+        console.log(this.state.username)
+    }
+
+
     joystick = (event) => {
         console.log(event.x)
         console.log(event.y)
@@ -49,25 +74,16 @@ class GlobalProvider extends React.Component{
         }
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault()
-        const { name, value } = e.target
-        this.setState({[name]: value})
-    }
-
-    handleChange = (e) => {
-        const { name, value } = e.target
-        this.setState({[name]: value});
-    }
-
     render(){
         return(
             <Provider value={{
                 ...this.state,
+                signUp: this.signUp,
                 joystick: this.joystick,
                 handlePosition: this.handlePosition,
                 handleSubmit: this.handleSubmit,
-                handleChange: this.handleChange
+                handleChange: this.handleChange,
+                userSignUp: this.userSignUp
             }}>{this.props.children}
             </Provider>
         )

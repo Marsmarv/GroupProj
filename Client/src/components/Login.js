@@ -2,7 +2,16 @@ import React from 'react';
 import {withGlobalProvider} from './GlobalProvider'
 
 const Login = (props) => {
-  const { handleChange, handleSubmit, username, password } = props
+  const { handleChange, username, password, userSignUp } = props
+
+  const handleSubmit = (e) => {
+      e.preventDefault()
+      userSignUp({username, password}).then(()=> {
+        props.history.push('/')
+      })
+      alert('successful sign up')
+  }
+
   return (
     <div className="login-container">
 
