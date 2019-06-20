@@ -10,7 +10,7 @@ const Login = (props) => {
       userSignUp({username, password}).then(()=> {
         props.history.push('/')
       })
-      alert('successful sign up')
+      alert(`successful sign up for ${props.username}`)
   }
 
   return (
@@ -26,10 +26,12 @@ const Login = (props) => {
         type="text" 
         name='password'
         placeholder="Password"
-        value={password} /> <br/>
+        value={password} /> <br/><br/>
+        <button>Sign up</button>
         <button>Log in</button>
       </form>
       </div>
+        <h3 className="welcome">Welcome {props.username}!</h3>
     </Fade>
   )
 }

@@ -1,7 +1,8 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
+import {withGlobalProvider} from './GlobalProvider'
 
-const Header = () => {
+const Header = (props) => {
   return (
     <Fade left delay={2500}>
       <div className='header'>
@@ -10,4 +11,4 @@ const Header = () => {
     </Fade>
   )
 }
-export default Header
+export default withGlobalProvider(Header)

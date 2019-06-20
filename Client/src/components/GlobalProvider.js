@@ -6,8 +6,8 @@ class GlobalProvider extends React.Component{
     constructor() {
         super()
         this.state = {
-            positionY: 200,
-            positionX: 200,
+            positionY: 150,
+            positionX: 50,
             username: '',
             password: '',
             token: ''
@@ -27,18 +27,28 @@ class GlobalProvider extends React.Component{
         })
     }
 
+    userLogin = (userInfo) => {
+        return Axios.post("/auth/login", userInfo).then(res => {
+            const { username, token } = res.data
+            localStorage.setItem("token", token);
+            localStorage.setItem("username", JSON.stringify(username));
+            this.setState({
+                username,
+                token
+            });
+            return res
+        })
+    }
+
     
 
     handleChange = (e) => {
         const { name, value } = e.target
         this.setState({[name]: value});
-        console.log(this.state.username)
     }
 
 
     joystick = (event) => {
-        console.log(event.x)
-        console.log(event.y)
         this.setState(prev => {
             return({
                 positionY: prev.positionY - event.y/30,
