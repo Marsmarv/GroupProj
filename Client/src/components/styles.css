@@ -287,9 +287,13 @@ input{
 /* Games Page */
 
 .games {
-  height: 500px;
-  height: 65vh;
-  background-color: rgb(0, 183, 255);
+  background-position-y: 131px;
+    height: 65vh;
+    background-color: rgb(0, 183, 255);
+    background-image: url(/static/media/charizard.8bb2bd0c.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 5px;
 }
 
 .games-content{
@@ -300,10 +304,6 @@ input{
   margin-right: auto;
   height: max-content;
   width: max-content;
-  /* background-image: url('../images/sky.jpg');
-  background-size: cover; 
-  background-repeat: no-repeat;
-  background-position: center; */
 }
 /* .connect-image{
   background-image: url('../images/four2.png')
