@@ -5,7 +5,7 @@
 body{
   background-image: url('https://cdn.dribbble.com/users/621155/screenshots/2835329/coorzzz.gif');
   background-size: 800px;
-  background-position-x: -210px;
+  background-position-x: -194px;
   height: 50vh;
   width: 100vw;
 }
@@ -173,45 +173,36 @@ body{
 .games{
   height: 500px;
 }
-/* .tic{
-  background-image: url('../images/tic.png');
-  background-size: contain; 
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 130px;
-  width: 130px;
-  border-style: solid;
-  border-width: 4px;
-  border-color: black;
-}
-.game2{
-  background-image: url('../images/four2.png');
-  background-size: cover; 
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 130px;
-  width: 130px;
-  border-style: solid;
-  border-width: 4px;
-  border-color: black;
-} */
 .main{
   margin: 30px
 }
 
+/* login page */
+
 .login-container{
   height: 65vh;
-  background-color:rgb(77, 187, 238);
+  background-image: url('https://data.whicdn.com/images/275493408/original.gif');
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
 }
 
-.form-set{
-  display: space-betweenl
-
+input{
+  height: 40px;
+  width: 200px;
+  border-style: solid;
+  border-radius: 100px;
+  border-width: 4px;
+  border-color: rgb(255, 123, 0);
+  font-size: 14pt;
+  text-align: center;
 }
 
 button {
-  margin-left: 45px;
+  border-style: solid;
+  border-color: rgb(214, 54, 5);
+  border-radius: 100px;
+  border-width: 2px;
+  font-size: 14pt;
+  margin-left: 70px;
 }
