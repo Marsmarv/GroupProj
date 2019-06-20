@@ -120,7 +120,7 @@ body{
   border-color: gray;
   display: flex;
   border-radius: 0;
-  justify-content: space-between;
+  justify-content: space-around;
   display: flex;
   align-items: center;
   border-top-left-radius: 15px;
@@ -128,7 +128,7 @@ body{
 } */
 .footer{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   position: fixed;
   bottom: 0;
