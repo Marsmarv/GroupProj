@@ -8,36 +8,54 @@ class GlobalProvider extends React.Component{
         this.state = {
             positionY: 150,
             positionX: 50,
-            username: '',
             password: '',
-            token: ''
+            user: JSON.parse(localStorage.getItem('user')) || {},
+            token: localStorage.getItem('token') || '',
+            userData: {}
         }
+    }
+
+    getUserData = () => {
+        Axios.get('/api/game').then(response => {
+            console.log(response.data)
+            this.setState({userData: response.data})
+        })
     }
 
     userSignUp = (userInfo) => {
         return Axios.post("/auth/signup", userInfo).then(res => {
-            const { username, token } = res.data
+            const { user, token } = res.data
+            console.log(res.data)
             localStorage.setItem("token", token);
-            localStorage.setItem("username", JSON.stringify(username));
+            localStorage.setItem("user", JSON.stringify(user));
             this.setState({
-                username,
+                user,
                 token
             });
+
             return res
         })
     }
 
     userLogin = (userInfo) => {
         return Axios.post("/auth/login", userInfo).then(res => {
-            const { username, token } = res.data
+            const { user, token } = res.data
             localStorage.setItem("token", token);
-            localStorage.setItem("username", JSON.stringify(username));
+            localStorage.setItem("user", JSON.stringify(user));
             this.setState({
-                username,
+                user,
                 token
             });
+            this.getUserData()
             return res
         })
+    }
+
+    logout = () => {
+        localStorage.removeItem('user')
+        localStorage.removeItem('token')
+        this.setState({ user: {}, token: "" })
+        
     }
 
     
@@ -93,7 +111,9 @@ class GlobalProvider extends React.Component{
                 handlePosition: this.handlePosition,
                 handleSubmit: this.handleSubmit,
                 handleChange: this.handleChange,
-                userSignUp: this.userSignUp
+                userSignUp: this.userSignUp,
+                userLogin: this.userLogin,
+                logout: this.logout
             }}>{this.props.children}
             </Provider>
         )

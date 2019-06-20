@@ -6,6 +6,7 @@ import {withGlobalProvider} from './GlobalProvider'
 const Footer = (props) => {
   return (
     <>
+    <div className="over-footer">
       <div className='footer'>
 
         <div className="joy"><Joystick size={100} baseColor="grey" stickColor="black" move={props.joystick} stop={props.joystick}></Joystick></div>
@@ -17,6 +18,7 @@ const Footer = (props) => {
           <Link to='/games' className='games-button'></Link>
           <Link to='/login' className='info-button'></Link>
         </div>
+      </div>
       </div>
     </>
   )
