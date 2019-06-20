@@ -30,6 +30,21 @@ body{
   height: 70px;
   width: 100px;
 }
+.outer-modal{
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 80vw;
+  height: 20vh;
+  background: rgba(0,0,0,0.5);
+}
+.stats-modal{
+  
+}
+.no-display{
+  display: none;
+}
 
 /* Body content */
 

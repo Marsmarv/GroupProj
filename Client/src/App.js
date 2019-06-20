@@ -19,6 +19,7 @@ const App = () => {
           <Route exact path='/' component={HomePage} />
           <Route path='/login' component={Login} />
           <Route path='/games' component={Games} />  
+          
         </Switch>
     </Fade>
       <Footer />
