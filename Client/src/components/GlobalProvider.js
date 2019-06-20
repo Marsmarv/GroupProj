@@ -18,14 +18,21 @@ class GlobalProvider extends React.Component{
             password: '',
             user: JSON.parse(localStorage.getItem('user')) || {},
             token: localStorage.getItem('token') || '',
-            userData: {}
+            userData: {},
+            wins: 0,
+            losses: 0
         }
     }
 
     getUserData = () => {
         gameAxios.get('/api/game').then(response => {
             console.log(response.data)
-            this.setState({userData: response.data})
+            this.setState({
+                userData: response.data,
+                wins: response.data[1].wins,
+                losses: response.data[1].losses
+            })
+            console.log(`Wins: ${this.state.userData[1].wins}`, `Losses: ${this.state.userData[1].losses}`)
         })
     }
 
