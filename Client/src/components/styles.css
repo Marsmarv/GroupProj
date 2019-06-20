@@ -217,9 +217,6 @@ body{
 .nav{
   margin: 30px;
 }
-.games{
-  height: 500px;
-}
 .main{
   margin: 30px
 }
@@ -247,8 +244,28 @@ input{
   text-align: center;
 }
 .games {
+  height: 500px;
   height: 65vh;
   background-color: white;
+}
+.games-content{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: max-content;
+  width: max-content;
+  background-image: url('../images/sky.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bgio-client{
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+
 }
 
 button {
