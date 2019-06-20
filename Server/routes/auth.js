@@ -4,7 +4,9 @@ const authRouter = express.Router()
 const jwt = require('jsonwebtoken')
 
 authRouter.post('/signup', (req, res, next) => {
+  console.log(req.body.username)
   User.findOne({username: req.body.username}, (err, existingUser) => {
+    console.log(existingUser)
     if (err) {
       res.status(500)
       return next(err)
@@ -28,6 +30,7 @@ authRouter.post('/signup', (req, res, next) => {
 })
 
 authRouter.post('/login', (req, res, next) => {
+
   User.findOne({username: req.body.username.toLowerCase()},(err, user) => {
     if(err) {
       return next(err)

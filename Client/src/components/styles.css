@@ -207,6 +207,11 @@ body{
   justify-content: center
 }
 
+.games {
+  height: 65vh;
+  background-color: white;
+}
+
 .form-set{
   display: space-betweenl
 
