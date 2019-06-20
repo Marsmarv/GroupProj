@@ -2,12 +2,17 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+/* .react-reveal{
+  width: 70vw;
+} */
+
 body{
   background-image: url('https://cdn.dribbble.com/users/621155/screenshots/2835329/coorzzz.gif');
   background-size: 800px;
   background-position-x: -210px;
   background-position-y: -30px;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   height: 50vh;
   width: 100vw;
 }
@@ -58,7 +63,7 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  z-index: 1;
+  z-index: 10;
 
 }
 .clouds{
