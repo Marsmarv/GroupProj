@@ -3,6 +3,7 @@ const gameRouter = express.Router();
 const Game = require("../models/game");
 
 gameRouter.get('/', (req, res, next) => {
+  console.log(req.user)
   Game.find({user: req.user._id}, (err, games) => {
     if (err) {
       res.status(500)
