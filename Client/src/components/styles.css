@@ -35,6 +35,38 @@ body{
   height: 70px;
   width: 100px;
 }
+
+.cloud {
+  background-color: #fff;
+  border-radius: 48px;
+  display: inline-block;
+  position: relative;
+  width: 48px;
+  height: 16px;
+}
+/* 
+.outer-modal::before, 
+.outer-modal::after {
+  background-color: #fff;
+  border-radius: 50%;
+  content: '';
+  width: 45vw;
+  height: 10vh;
+  position: absolute;
+  right: 7px;
+  top: -6px;
+  
+}
+
+.outer-modal::after {
+  background-color: #fff;
+  height: 23px;
+  left: 7px;
+  right: auto;
+  top: -10px;
+  width: 23px;
+} */
+
 .outer-modal{
   position: fixed;
   z-index: 2;
@@ -48,6 +80,8 @@ body{
 .stats-modal{
   color:white;
   text-align:center;
+  font-size: 13pt;
+  margin-top: 7px;
 }
 .no-display{
   display: none;
