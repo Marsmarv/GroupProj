@@ -295,7 +295,10 @@ input{
     background-repeat: no-repeat;
     background-position-x: 5px;
 }
-
+.connect {
+  text-decoration: none;
+  color: black;
+}
 .games-content{
   display: flex;
   justify-content: center;
