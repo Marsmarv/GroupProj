@@ -182,6 +182,7 @@ body{
 .login-container{
   height: 65vh;
   background-image: url('https://data.whicdn.com/images/275493408/original.gif');
+  background-size:cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,7 +198,7 @@ input{
   border-color: rgb(255, 123, 0);
   font-size: 14pt;
   text-align: center;
-
+}
 .games {
   height: 65vh;
   background-color: white;

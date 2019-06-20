@@ -24,7 +24,7 @@ class HomePage extends React.Component{
       right: `${this.props.positionX}pt`
     }
     return (
-      <Fade right delay={3500}>
+      <Fade right delay={3000}>
         <div className='clouds'>
           <Fade delay={1000}><div className="charizard" style = {styles}></div></Fade> 
         </div>
