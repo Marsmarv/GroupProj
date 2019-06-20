@@ -5,7 +5,9 @@
 body{
   background-image: url('https://cdn.dribbble.com/users/621155/screenshots/2835329/coorzzz.gif');
   background-size: 800px;
-  background-position-x: -194px;
+  background-position-x: -210px;
+  background-position-y: -30px;
+  background-repeat: no-repeat;
   height: 50vh;
   width: 100vw;
 }
@@ -24,8 +26,8 @@ body{
   background-image: url('../images/sunny.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 87px; 
-  height: 85px;
+  background-size: 75px; 
+  height: 70px;
   width: 100px;
 }
 
@@ -122,7 +124,8 @@ body{
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  padding: 10px
+  padding: 10px;
+  margin-right: 5px;
 }
 .text{
   width: 70px;
@@ -211,4 +214,12 @@ button {
   border-width: 2px;
   font-size: 14pt;
   margin-left: 70px;
+}
+
+.joy {
+  margin-left: 10px;
+}
+
+.joy {
+  margin-left:5px;
 }

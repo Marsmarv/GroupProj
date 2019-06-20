@@ -26,7 +26,7 @@ const Login = (props) => {
         type="text" 
         name='password'
         placeholder="Password"
-        value={password} /> <br/>
+        value={password} /> <br/><br/>
         <button>Log in</button>
       </form>
       </div>

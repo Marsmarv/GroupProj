@@ -6,8 +6,8 @@ class GlobalProvider extends React.Component{
     constructor() {
         super()
         this.state = {
-            positionY: 200,
-            positionX: 200,
+            positionY: 150,
+            positionX: 50,
             username: '',
             password: '',
             token: ''
