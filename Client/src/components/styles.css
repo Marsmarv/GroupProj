@@ -308,7 +308,6 @@ input{
   position: relative;
   top: -40px;
 }
-
 .games-content{
   display: flex;
   justify-content: center;
@@ -349,6 +348,7 @@ button.columnSelector{
 .joy {
   margin-left: 10px;
 }
+
 
 .joy {
   margin-left:5px;
