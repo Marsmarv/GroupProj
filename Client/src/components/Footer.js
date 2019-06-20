@@ -9,7 +9,7 @@ const Footer = (props) => {
     <div className="over-footer">
       <div className='footer'>
 
-        <div className="joy"><Joystick size={100} baseColor="grey" stickColor="black" move={props.joystick} stop={props.joystick}></Joystick></div>
+        <div className="joy"><Joystick size={100} baseColor="#d4d7d0" stickColor="#555752" move={props.joystick} stop={props.joystick}></Joystick></div>
 
         <Link to='/' className='home-button'>HOME</Link>
         <div className='button-container'>
