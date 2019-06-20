@@ -1,6 +1,7 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 import ConnectFourApp from '../connect-four/ConnectFourApp'
+import TicTacToeApp from '../tic-tac-toe/TicTacToeApp'
 import { Link } from "react-router-dom";
 
 import { Switch, Route } from 'react-router-dom'
@@ -12,6 +13,7 @@ const Games = () => {
         <div className='games-content'>
           <Switch>
             <Route path='/games/connect-four' component={ConnectFourApp} />
+            <Route path='/games/tic-tac-toe' component={TicTacToeApp} />
           </Switch>
         </div>
         <div className='game-nav'>
