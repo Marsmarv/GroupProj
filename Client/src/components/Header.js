@@ -7,7 +7,7 @@ const Header = (props) => {
     const [ showStats, setShowStats ] = useState(false)
 
     const modalDisplay = showStats ? "show-modal" : "no-display"
-console.log(props)
+
     return (
       <>
         <Fade left delay={2500}>
@@ -17,11 +17,13 @@ console.log(props)
             </Fade>
           </div>
         </Fade>
+      <Fade top when={showStats === true}>
         <div className={`outer-modal ${modalDisplay}`}>
           <div className="stats-modal">
-            hello <h3>Wins: {props.wins}, Losses: {props.losses}</h3>
+            User: {props.username}  <h3>Wins: {props.wins} , Losses: {props.losses}</h3>
           </div>
         </div>
+      </Fade>
       </>
   )
 }
