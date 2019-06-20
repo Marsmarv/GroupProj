@@ -289,7 +289,7 @@ input{
   background-position-y: 131px;
     height: 65vh;
     background-color: rgb(0, 183, 255);
-    background-image: url(/static/media/charizard.8bb2bd0c.png);
+    background-image: url('../images/charizard.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: 5px;
@@ -297,6 +297,7 @@ input{
 .connect {
   text-decoration: none;
   color: black;
+  margin-left:140px
 }
 .games-content{
   display: flex;
