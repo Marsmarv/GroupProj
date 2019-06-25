@@ -3,7 +3,7 @@ const gameRouter = express.Router();
 const Game = require("../models/game");
 
 gameRouter.get('/', (req, res, next) => {
-  console.log(req.user)
+  console.log(req.user_id)
   Game.find({user: req.user._id}, (err, games) => {
     if (err) {
       res.status(500)
@@ -14,6 +14,7 @@ gameRouter.get('/', (req, res, next) => {
 })
 
 gameRouter.post('/', (req, res, next) => {
+  console.log(req.user._id)
   const game = new Game(req.body)
   game.user = req.user._id
   game.save(function (err, newGame) {
@@ -25,45 +26,47 @@ gameRouter.post('/', (req, res, next) => {
   })
 })
 
-gameRouter.get("/:gameId", (req, res, next) => {
-  Game.findOne({_id: req.params.gameId, user: req.user._id}, (err, game) => {
-    if(err){
-      res.status(500)
-      return next(err)
-    }
-    if (!game) {
-      res.status(404)
-      return next (new Error("No stat found."))
-    }
-    return res.send(game)
-  })
-})
-
-gameRouter.put("/:gameId", (req, res, next) => {
-  Game.findOneAndUpdate({_id: req.params.gameId, user: req.user._id},
-     req.body, 
-     { new: true }, 
-     (err, game) => {
+todoRouter.get("/:gameId", (req, res, next) => {
+  Todo.findOne( {_id: req.params.gameId, user: req.user._id}, (err, todo) => {
       if (err) {
-        console.log("Error")
-        res.status(500)
-        return next(err)
+          res.status(500);
+          return next(err);
       }
-      return res.send(`${game} 
-      --Successfully Edited--`)
-    }
-  )
-})
+      if (!todo) {
+          res.status(404)
+          return next(new Error("No todo item found."));
+      }
+      return res.send(todo);
+  });
+});
 
-gameRouter.delete("/:gameId", (req, res, next) => {
-  Game.findOneAndRemove({_id:req.params.gameId, user:req.user._id}, (err, game) => {
-    if (err) {
-      res.status(500)
-      return next(err)
-    }
-    return res.send(`${game} 
-    --Successfully Deleted--`)
-  })
-})
+todoRouter.put("/:todoId", (req, res, next) => {
+  Todo.findOneAndUpdate(
+      {_id: req.params.todoId, user: req.user._ids},
+      req.body,
+      { new: true },
+      (err, todo) => {
+          if (err) {
+              console.log("Error");
+              res.status(500);
+              return next(err);
+          }
+          return res.send(todo);
+      }
+  );
+});
+
+todoRouter.delete("/:todoId", (req, res, next) => {
+  Todo.findOneAndRemove({_id:req.params.todoId, user:req.user._id}, (err, todo) => {
+      if (err) {
+          res.status(500);
+          return next(err);
+      }
+      return res.send(todo);
+  });
+});
 
 module.exports = gameRouter
+
+// not completeted
+// don't really know what we'll be needing a game component for yet
