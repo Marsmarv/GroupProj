@@ -17,7 +17,7 @@ const Footer = (props) => {
           <div className='text'>LOGIN</div>
           <Link to='/games' className='games-button'></Link>
           <Link to='/login' className='info-button'></Link>
-        </div>
+        </div> 
       </div>
       </div>
     </>

@@ -20,7 +20,8 @@ class GlobalProvider extends React.Component{
             token: localStorage.getItem('token') || '',
             userData: {},
             wins: 0,
-            losses: 0
+            losses: 0,
+            
         }
     }
 
